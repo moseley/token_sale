@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>DApp Token ICO Sale</title>
+  </head>
+  <body>
+    <main role="main" class="container">
+        <div class="row">
+          <div class="col">
+            <h1 class="text-center">DAPP TOKEN ICO SALE</h1>
+            <hr>
+            <br>
+          </div>
+        </div>
+        <div id="loader"><p class="text-center">Loading...</p></div>
+        <div id="content" style="display: none;">
+        <div class="row">
+          <div class="col text-center">
+            <p>Introducing "DApp Token" (DAPP)!<br>
+            Token price is <span class="token-price"></span> Ether.<br>
+            You currently have <span class="dapp-balance"></span> DAPP.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 offset-md-3 text-center">
+            <form class="form-inline" onsubmit="App.buyTokens(); return false;">
+              <label class="sr-only" for="numberOfTokens">DAPP Amount</label>
+              <input type="number" class="form-control mb-2 mr-sm-2 flex-grow-1" id="numberOfTokens" name="number" value="1" min="1" pattern="[0-9]">
+              <button type="submit" class="btn btn-primary mb-2">Buy Tokens</button>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 offset-md-3 text-center">
+            <div class="progress">
+              <div id="progress" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 offset-md-3 text-center">
+            <p><span class="tokens-sold"></span> / <span class="tokens-available"></span> tokens sold</p>
+            <hr>
+            <p id="accountAddress"></p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

@@ -17,7 +17,8 @@ App = {
       App.web3Provider = web3.currentProvider;
       web3 = new Web3(web3.currentProvider);
     } else {
-      App.web3Provider = new Web3.providers.HttpProvider("http://localhost:7545");
+      //App.web3Provider = new Web3.providers.HttpProvider("http://localhost:7545");
+      App.web3Provider = new Web3.providers.HttpProvider("https://rinkeby.infura.io/v3/f55ffafd27e248a6a01b68b8fff2b3b0");
       web3 = new Web3(App.web3Provider);
     }
     return App.initContracts();
@@ -37,7 +38,7 @@ App = {
         App.contracts.DappToken.deployed().then(function(dappToken) {
           console.log("Dapp Token Address: ", dappToken.address);
         });
-        
+
         App.listenForEvents();
         return App.render();
       });

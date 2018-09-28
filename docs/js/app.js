@@ -126,6 +126,7 @@ App = {
 
 $(function() {
   $(window).on('load', function() {
+    console.log('Loading...');
     App.init();
   });
 });

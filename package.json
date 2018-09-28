@@ -7,11 +7,13 @@
     "test": "test"
   },
   "scripts": {
-    "dev": "lite-server"
+    "dev": "lite-server",
+    "build": "cp -r src/* docs/ | cp build/contracts/* docs/"
   },
   "author": "Jeremy",
   "license": "ISC",
   "devDependencies": {
-    "lite-server": "^2.3.0"
+    "lite-server": "^2.3.0",
+    "sync-files": "^1.0.3"
   }
 }

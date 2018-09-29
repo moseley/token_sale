@@ -128,10 +128,10 @@ App = {
 
 $(function() {
   console.log('first function');
-  $(window).on('load', function() {
+  //$(window).on('load', function() {
     console.log('js ready');
     App.init();
     console.log('initialized');
-  });
+  //});
 });
 console.log('js/app.js close');

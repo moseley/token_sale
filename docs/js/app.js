@@ -1,3 +1,4 @@
+console.log('js/app.js open');
 App = {
   web3Provider: null,
   contracts: {},
@@ -126,7 +127,11 @@ App = {
 }
 
 $(function() {
+  console.log('first function');
   $(window).on('load', function() {
+    console.log('js ready');
     App.init();
+    console.log('initialized');
   });
 });
+console.log('js/app.js close');

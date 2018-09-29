@@ -1,4 +1,3 @@
-console.log('js/app.js open');
 App = {
   web3Provider: null,
   contracts: {},
@@ -9,7 +8,6 @@ App = {
   tokensAvailable: 750000,
 
   init: function() {
-    console.log("App initialized...");
     return App.initWeb3();
   },
 
@@ -19,7 +17,6 @@ App = {
       web3 = new Web3(web3.currentProvider);
     } else {
       App.web3Provider = new Web3.providers.HttpProvider("http://localhost:7545");
-      //App.web3Provider = new Web3.providers.HttpProvider("https://rinkeby.infura.io/v3/f55ffafd27e248a6a01b68b8fff2b3b0");
       web3 = new Web3(App.web3Provider);
     }
     return App.initContracts();
@@ -128,10 +125,5 @@ App = {
 
 $(function() {
   console.log('first function');
-  //$(window).on('load', function() {
-    console.log('js ready');
     App.init();
-    console.log('initialized');
-  //});
 });
-console.log('js/app.js close');
